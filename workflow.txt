@@ -1,0 +1,29 @@
+CoinGecko API (source)
+      │
+      ▼
+Data Ingestion
+(Python Producer)
+      │
+      ▼
+Apache Kafka
+(Streaming Layer)
+      │
+      ▼
+Apache Spark Streaming
+(Process Data)
+      │
+      ├──► Raw Storage (JSON Files)
+      │
+      ▼
+MySQL
+(Data Warehouse)
+      │
+      ▼
+Data Modeling
+(Star Schema)
+      │
+      ▼
+Power BI Dashboard
+      │
+      ▼
+Business Insights

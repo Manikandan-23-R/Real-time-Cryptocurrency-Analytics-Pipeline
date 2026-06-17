@@ -1,0 +1,7 @@
+# Change Directory and Start the Kafka Server 
+
+cd C:\kafka\kafka_2.13-4.3.0
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+# check the offset 
+. bin/windows/kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic crypto_prices --from-beginning
