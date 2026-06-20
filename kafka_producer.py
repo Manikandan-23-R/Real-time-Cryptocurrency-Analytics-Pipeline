@@ -15,7 +15,7 @@ TOPIC_NAME = "crypto_prices"
 
 def start_producing():
     print("🚀 Kafka Live Producer Pipeline Started...")
-    print("📡 Fetching REAL-TIME data from CoinGecko API every 10 seconds...\n")
+    print("📡 Fetching REAL-TIME data from CoinGecko API every 30 seconds...\n")
     
     try:
         while True:
