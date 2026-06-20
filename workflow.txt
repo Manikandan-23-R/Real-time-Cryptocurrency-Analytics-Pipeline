@@ -1,6 +1,6 @@
-CoinGecko API (source)
+CoinGecko API (source)                           
       │
-      ▼
+      ▼                                                                  
 Data Ingestion
 (Python Producer)
       │

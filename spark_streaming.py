@@ -199,10 +199,10 @@ def start_spark_analytics():
     query = parsed_df.writeStream \
         .foreachBatch(write_to_mysql) \
         .outputMode("append") \
-        .trigger(processingTime="30 seconds") \
+        .trigger(processingTime="5 seconds") \
         .start()
 
-    print("📡 Listening to Kafka → Writing to MySQL every 30 seconds...")
+    print("📡 Listening to Kafka → Writing to MySQL every 5 seconds...")
     query.awaitTermination()
 
 if __name__ == "__main__":

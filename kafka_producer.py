@@ -2,7 +2,6 @@ import json
 import time
 from kafka import KafkaProducer
 
-# 🚀 இப்போ உங்க உண்மையான API ஃபைலை மீண்டும் கனெக்ட் பண்றோம்!
 from data_fetcher import get_crypto_data 
 
 producer = KafkaProducer(
@@ -15,7 +14,7 @@ TOPIC_NAME = "crypto_prices"
 
 def start_producing():
     print("🚀 Kafka Live Producer Pipeline Started...")
-    print("📡 Fetching REAL-TIME data from CoinGecko API every 30 seconds...\n")
+    print("📡 Fetching REAL-TIME data from CoinGecko API every 5 seconds...\n")
     
     try:
         while True:
@@ -33,8 +32,8 @@ def start_producing():
                 print(f"✅ Sent to Kafka | Key: {crypto_key:<10} | Price: INR {event['current_price']}")
             
             producer.flush() 
-            print("⏳ Waiting for 30 seconds...\n")
-            time.sleep(30)
+            print("⏳ Waiting for 5 seconds...\n")
+            time.sleep(5)
             
     except KeyboardInterrupt:
         print("\n🛑 Producer stopped by user.")

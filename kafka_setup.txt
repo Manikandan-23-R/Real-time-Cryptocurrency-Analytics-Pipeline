@@ -1,7 +1,13 @@
 # Change Directory and Start the Kafka Server 
-
 cd C:\kafka\kafka_2.13-4.3.0
 .\bin\windows\kafka-server-start.bat .\config\server.properties
+
+# create the topic and partitions
+bin\windows\kafka-topics.bat --create ^
+  --topic crypto_prices ^
+  --bootstrap-server localhost:9092 ^
+  --partitions 3 ^
+  --replication-factor 1
 
 # check the offset 
 . bin/windows/kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic crypto_prices --from-beginning
